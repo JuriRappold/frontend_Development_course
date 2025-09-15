@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Tech Day</title>
+    <meta name="description: A community Tech Day at HKR!">
+</head>
+<body>
+    <header>
+        <h1>Community Tech Day @HKR</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata
+        </p>
+        <nav>
+            <label><strong>Navigation: </strong></label>
+            <!-- Links -->
+            <a href="#about">About</a>
+            <a href="#schedule">Schedule</a>
+            <a href="#register">Register</a>
+            <a href="#media">Media</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+                Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+                Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.<br>
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis.
+                At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Consetetur sadipscing elitr, sed diam nonumy <a href="https://youtube.com" target="_blank" rel="noopener">tempor</a>  invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore
+            </p>
+            <figure>
+                <img src="assets/floatyLap.jpg" alt="Floaty Laptop" width="800" height="500">
+                <figcaption>A foto of a Laptop with a blurry background, giving the illusion of a floating Laptop</figcaption>
+            </figure>
+        </section>
+
+        <section id="schedule">
+            <h2>Schedule</h2>
+
+            <h3>Highlights</h3>
+            <ol>
+                <li>Work</li>
+                <li>HR Meetings</li>
+                <li>Unpaid Overtime</li>
+            </ol>
+
+            <h3>Amenities</h3>
+            <ul>
+                <li>Ping-Pong tables</li>
+                <li>Quarterly Pizza Parties</li>
+                <li>Donate to the company charity</li>
+            </ul>
+
+            <h3>Times, Sessions, Rooms</h3>
+            <style>
+                table, th, td{
+                    border: 1px solid black;
+                    border-collapse: collapse;
+                }
+            </style>
+            <table>
+                <caption>
+                    Times, Sessions, and Rooms of Events
+                </caption>
+
+                <colgroup>
+                    <col span="1"> <!-- Time -->
+                    <col span="1"> <!-- Session -->
+                    <col span="1"> <!-- Room -->
+                </colgroup>
+
+                <thead>
+                    <tr>
+                        <th scope="col">Time</th>
+                        <th scope="col">Session</th>
+                        <th scope="col">Room</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><time datetime="2025-09-11T10:00">10:00</time></td> <!-- 2025-09-11T10:00 -->
+                        <td>HR-Meeting</td>
+                        <td>HR Office</td>
+                    </tr>
+                    <tr>
+                        <td><time datetime="2025-09-11T12:00">12:00</time> </td>
+                        <td>Work</td>
+                        <td>Ping-Pong Tables</td>
+                    </tr>
+                    <tr>
+                        <td><time datetime="2025-09-11T14:00">14:00</time> </td>
+                        <td>Overtime</td>
+                        <td>Company Charity Office</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="register">
+            <h2>Register</h2>
+            <form>
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <p>
+                        <label for="name">Name:</label>
+                        <input id="name" name="name" type="text" placeholder="John Doe" required>
+                    </p>
+                    <p> <!-- Email -->
+                        <label for="email">Email:</label>
+                        <input id="email" name="email" type="email" placeholder="example@email.domain" required>
+                    </p>
+                    <p><!-- Number of Attendies -->
+                        <label for="count">Number of Attendies</label>
+                        <input id="count" name="count" type="number" min="5" max="20" value="10">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>Attendance</legend>
+                    <p>
+                    <label for="one"><input id="one" name="type" value="one" type="radio">One</label>
+                    </p>
+                    <p>
+                    <label for="pre-check"><input id="pre-check" name="type" value="pre-check" type="radio">Pre-Check</label>
+                    </p>
+                    <p>
+                    <label for="subscribe"><input id="subscribe" type="checkbox">Subscribe to Updates</label>
+                    </p>
+                    <p>
+                        <label for="submit"><input id="submit" type="submit" value="Send"></label>
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+
+        <section id="media">
+            <h2>Media</h2>
+            <p>
+                <video controls preload="metadata" width="720" playsinline poster="assets/floatyLap.jpg">
+                    <source src="assets/rollingEarth.mp4" type="video/mp4">
+
+                </video>
+                <figcaption>Turning Earth</figcaption>
+            </p>
+
+            <p>
+                <audio controls preload="metadata">
+                    <source src="assets/audioEarth.mp3" type="audio/mp3">
+                </audio>
+            </p>
+        </section>
+
+
+    </main>
+
+    <aside>
+        <h3>Venue</h3>
+        <p>
+            The venue is the Sportshall, commonly used by HKIF in building 7b. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
+        </p>
+
+        <h3>Wifi</h3>
+        <p>
+            Please use the HKR guest wifi or eduroam.Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed di
+        </p>
+    </aside>
+
+    <footer>
+        <p>
+            Copyright remains with the creator of this page.
+        </p>
+    </footer>
+</body>
+</html>

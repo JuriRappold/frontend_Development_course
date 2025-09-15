@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Type Selector</title>
+    <link rel="stylesheet" href="class-style.css" type="text/css">
+    <link rel="stylesheet" href="id-style.css" type="text/css">
+    <style>
+        div{
+            width: 50%;
+        }
+        a {
+            background: Yellow;
+        }
+        h1, ul{
+            color: white;
+            background: Blue;
+        }
+        * {
+            font-style: italic;
+        }
+        div * {
+            border: 2px solid Red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Applying Style to Sub-Elements of a Container</h1>
+        <ul>
+            <li><a href="https://google.com">Google</a></li>
+            <li><a href="https://yahoo.com">Yahoo</a></li>
+            <li><a href="https://mediafire.com">MediaFire</a></li>
+        </ul>
+    </div>
+    <h1 class="frame">Applying Style to a class</h1>
+    <p class="frame">
+        You can fool all the people
+        <span class="frame">some</span> of the time,and
+        <span class="frame">some</span> of the people all the time,
+        but you cannot fool all the people all the time.
+    </p>
+    <h1 id="head1">Applying Style to ids</h1>
+    <p id="para1">
+        You may only be someone
+        <span id="span1">in the world</span><br>
+        but someone else you may
+        <span id="span2">be the world</span>
+    </p>
+
+
+</body>
+</html>
