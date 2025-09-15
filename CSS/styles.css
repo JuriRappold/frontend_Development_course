@@ -1,0 +1,73 @@
+/*
+    used to reset style;
+ */
+*, *:before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ inserts style-specifics after each paragraph element; example: pseudo-elements
+ */
+p::after {
+    content: "; End of Paragraph";
+}
+
+/*
+example: pseudo-classes
+a:hover => when hovering over an anchor (<a></a>) element, apply these rules
+a:visited => if the link behind the anchor has been visited, apply these rules
+ */
+a:hover{
+    color: hotpink;
+}
+
+a:visited{
+    color: green;
+}
+/*
+p:first-child, any parent with paragraph children, apple these rules to the first paragraph child
+ */
+p:first-child em {
+    color: blue;
+}
+
+h1 {
+    width: 50%;
+    border: 2px solid red;
+}
+
+#title {
+    color: purple;
+    float: left;
+}
+
+#testing_header {
+    color: blue;
+    float: right;
+}
+/*
+body {
+    background-image: url("../HTML/event-landing/assets/floatyLap.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+*/
+#box-model {
+    border: 1px dashed black;
+    padding:25px;
+    /* between content & border
+    1 value: all sides
+    2 values: top-bottom & right-left
+    4 values: top, right, bottom, left
+
+    */
+    margin: 30px;/* puffer between this element and others*/
+
+}
+
+#positions{
+    position: static;
+}
+

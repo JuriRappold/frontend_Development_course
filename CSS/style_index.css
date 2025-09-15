@@ -1,0 +1,128 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0f0f13;
+    --surface: #17171d;
+    --surface-2: #1e1e26;
+    --text: #e6e6eb;
+    --muted: #b6b6c2;
+    --brand: #c28b37;
+    --brand-ink: #2b1a08;
+
+    --font-sans: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+
+    --space-1: .25rem;
+    --space-2: .5rem;
+    --space-3: .75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+
+    --radius: .75rem;
+    --border: 1px solid rgba(255, 255, 255, .08);
+
+    --shadow-1: 0 1px 2px rgba(0, 0, 0, .3);
+    --shadow-2: 0 10px 24px rgba(0, 0, 0, .35);
+}
+/*two default elements*/
+html, body {
+    height: 100%;
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    text-rendering: optimizeLegibility;
+}
+.page{
+    width: min(1100px, 92%);
+    margin: 0 auto;
+    padding: var(--space-8);
+}
+
+h1,
+h2{
+    line-height: 1.25;
+}
+
+p.note{
+    color: var(--muted);
+}
+
+#site-header{
+    padding: var(--space-6);
+    margin-bottom: var(--space-8);
+    border: 1px solid white;
+    border-radius: var(--radius);
+    /*background: linear-gradient(180deg, rgba(255,255,255,0.5), radial-gradient(1200px, 600px, 0%-10%), );*/
+    /*position: sticky;
+    top: .75rem;
+    z-index: 5;*/
+}
+
+#positioning{
+    border: 2px solid var(--muted);
+    background: orange;
+
+}
+#positioning #position_lab_title{
+    padding: .35rem .65rem;
+    margin-bottom: 1.75rem;
+}
+
+#positioning #stage{
+    position: relative;
+    min-height: 420px;
+    border: 1px solid red;
+
+}
+
+.box{
+    display: inline-block;
+    padding: .55rem .8rem;
+    margin: .35rem;
+}
+
+#border {
+    display: inline-block;
+}
+
+.relative{
+    position: relative;
+    top: 0;
+    left: 0;
+    border: 1px solid purple;
+}
+
+.static{
+    position: static;
+
+}
+
+.absolute{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.sticky{
+    position: sticky;
+    top: .75rem;
+    z-index: 5;
+    background: blue;
+}
+
+.fixed{
+    position: fixed;
+
+}
+
+.tall_space{
+    height: 600px;
+}
