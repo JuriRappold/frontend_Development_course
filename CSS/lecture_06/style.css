@@ -1,0 +1,46 @@
+.s1-btn{
+    padding: .75rem 1rem;
+    border: 0px;
+    border-radius: .75rem;
+    background-color: blue;
+    color: #eee;
+    /*-webkit-box-shadow: inset 50px 44px 50px 9px rgba(0,0,0,0.48);*/
+    box-shadow: inset 50px 44px 50px 9px rgba(0,0,0,0.48);
+    transform: translateY(0);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.s1-btn:hover{
+    transform: translateY(2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.s1-btn:checked{
+    transform: translateY(200px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4);
+}
+
+.s2-link{
+    position: relative;
+    color: #3faaf5;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.s2-link::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 100%;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 500ms ease;
+}
+
+.s2-link:hover::after, .s2-link:focus-visible::after{
+    transform: scaleX(1);
+}
+

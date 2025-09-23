@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lecture 05</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <div class="wrap">
+        <header class="safe pad">
+            <a href="#" class="brand">Brand</a>
+            <label for="t" class="toggle">☰</label>
+            <input type="checkbox" id="t">
+            <nav aria-label="site">
+                <ul>
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Catalog</a></li>
+                    <li><a href="">Sign Up</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="pad">
+            <section class="hero" id="hero">
+                <div>
+                    <h1> My Website</h1>
+                    <p class="muted">Mobile first css, fluid type and smart images</p>
+                    <a href="#catalog" class="btn">Browse</a>
+                </div>
+                <picture>
+                    <source media="(min-width: 64rem)"
+                        srcset="https://picsum.photos/id/1018/1200/675 1200w, https://picsum.photos/id/1018/1600/900 1600w">
+                    <img src=" https://picsum.photos/id/1025/1200/800 1200w" alt="Pug in a blanket"
+                    srcset="https://picsum.photos/id/1025/400/267 400w, https://picsum.photos/id/1025/800/533 800w, https://picsum.photos/id/1025/1200/800 1200w"
+                    sizes>
+                </picture>
+            </section>
+
+            <section class="layout">
+                <aside class="sidebar">
+                    <ul class="tick">
+                        <li>Mobile first</li>
+                        <li>Fluid type</li>
+                        <li>srcset</li>
+                        <li>touch target</li>
+                        <li>safe area</li>
+                    </ul>
+                </aside>
+
+                <div id="catalog" class="grid">
+                    <article class="card">
+                        <img src="https://picsum.photos/id/103/400/300"
+                             srcset="https://picsum.photos/id/103/400/300 400w, https://picsum.photos/id/103/800/600 800w, https://picsum.photos/id/103/1200/900 1200w"
+                             sizes="(min-width:64rem) 33vw, (min-width:48rem) 50vw, 100vw" alt="Shoe" loading="lazy">
+                        <div class="content">
+                            <h3>Air Runner</h3>
+                            <p class="muted">Lightweight trainer.</p><a class="btn" href="#">Add</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/id/1044/400/300"
+                             srcset="https://picsum.photos/id/1044/400/300 400w, https://picsum.photos/id/1044/800/600 800w, https://picsum.photos/id/1044/1200/900 1200w"
+                             sizes="(min-width:64rem) 33vw, (min-width:48rem) 50vw, 100vw" alt="Backpack" loading="lazy">
+                        <div class="content">
+                            <h3>Trail Pack</h3>
+                            <p class="muted">Water-resistant.</p><a class="btn" href="#">Add</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://picsum.photos/id/1050/400/300"
+                             srcset="https://picsum.photos/id/1050/400/300 400w, https://picsum.photos/id/1050/800/600 800w, https://picsum.photos/id/1050/1200/900 1200w"
+                             sizes="(min-width:64rem) 33vw, (min-width:48rem) 50vw, 100vw" alt="Jacket" loading="lazy">
+                        <div class="content">
+                            <h3>Wind Shell</h3>
+                            <p class="muted">Packs small.</p><a class="btn" href="#">Add</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </main>
+        <footer></footer>
+    </div>
+</body>
+</html>
