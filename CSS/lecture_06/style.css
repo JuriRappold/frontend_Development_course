@@ -1,3 +1,7 @@
+.surface{
+    margin: 50px;
+}
+
 .s1-btn{
     padding: .75rem 1rem;
     border: 0px;
@@ -43,4 +47,217 @@
 .s2-link:hover::after, .s2-link:focus-visible::after{
     transform: scaleX(1);
 }
+.s3-cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+}
+
+
+.s3-card-item{
+    padding: 16px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    opacity: 1;
+    transform: translateY(10px);
+    animation: s3-in 400ms ease-out forwards;
+    color: black;
+}
+
+.s3-card-item:nth-child(1){
+    animation-delay: 0ms;
+}
+.s3-card-item:nth-child(2){
+    animation-delay: 80ms;
+}
+.s3-card-item:nth-child(3){
+    animation-delay: 160ms;
+}
+@keyframes s3-in {
+    from{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.s4-typing{
+    font: 600 18px ui-monospace, Consolas, monospace;
+    width: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid currentColor;
+    padding-right: 4px;
+    animation:
+        s4-typing 2.2s steps(26, end) .2s forwards,
+        s4-carat .8s steps(1, end) infinite;
+}
+@keyframes s4-typing {
+    to{
+        width: 26ch;
+    }
+}
+
+@keyframes s4-carat {
+    25%{
+       border-color: blue;
+    }
+    50%{
+        border-color: transparent;
+    }
+
+    75%{
+        border-color: red;
+    }
+
+}
+
+.s5-skeleton{
+    height: 80px;
+    border-radius: 12px;
+    background: linear-gradient(90deg,rgba(42, 123, 155, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(237, 221, 83, 1) 100%);
+    /*background:  linear-gradient(90deg, #eeeeee 25%, );*/
+    background-size: 400% 100%;
+    animation: s5-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes s5-shimmer {
+    to{
+        background-position: 100% 0;
+    }
+}
+
+
+.s6-btn{
+    padding: .75rem 1rem;
+    border: 0;
+    border-radius: .75rem;
+    background-color: black;
+    color: white;
+}
+#s6-toggle~.s6-backdrop,
+#s6-toggle~.s6-modal{
+    pointer-events: auto;
+    opacity: 0;
+    /*
+     */
+}
+.s6-toggle:checked~.s6-backdrop,
+.s6-toggle:checked~.s6-modal{
+    position: fixed;
+    inset: 0;
+    background-color: grey;
+    transition: opacity 220ms ease;
+}
+
+.s6-toggle:checked~.s6-backdrop{
+    opacity: 1;
+}
+
+.s6-modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(50%, 50%) scale(0.96);
+    border-radius: 1rem;
+    background-color: #eeeeee;
+    padding: 1rem 1.25rem 1.25rem 0;
+    min-width: 300px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: opacity 240ms ease, transform 240ms cubic-bezier(.2, .8, .2, 1);
+}
+
+.s6-close{
+    position: absolute;
+    top: 10px;
+    right: 12px;
+    background: transparent;
+    border: 0px;
+    font-size: 20px;
+    transition: transform 140ms ease;
+}
+
+.s6-close:hover {
+    transform: rotate(90deg) scale(1.05);
+}
+
+
+.s6-backdrop{
+
+}
+
+#s6-toggle:checked~.s6-modal{
+    opacity: 1;
+    transform: translate(-50%, 50%);
+}
+
+.s8-acc{
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 10px 12px;
+    background: #ffffff;
+    max-width: 640px;
+    margin: 8px 0;
+}
+
+.s8-acc summary{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+.s8-acc summary i{
+    transition: transform 180ms ease;
+}
+
+.s8-acc[open] summary i{
+    transform: rotate(180deg);
+}
+
+.s8-panel{
+    opacity: 0;
+    transform: translate(-4px);
+    padding: 8px 2px 4px;
+}
+.s8-acc[open] .s8-panel{
+
+}
+
+.s9-btn {
+    padding: .6rem 1rem;
+    border: 0px;
+    border-radius: .75rem;
+    background: black;
+}
+
+.s9-toast{
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    background: black;
+    color: #ffffff;
+    padding: 10px 14px;
+    border-radius: 12px;
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 240ms ease, transform 240ms ease;
+    pointer-events: none;
+}
+
+#s9-toggle:checked~.s9-toast{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.s9-label{
+    background: grey;
+    padding: .6rem 1rem;
+    border: 0px;
+    border-radius: .75rem;
+}
+
 
