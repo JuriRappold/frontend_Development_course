@@ -96,8 +96,18 @@ sprites: step by step image loading
 
 # Live-Coding
 1. Elevated Button
+   2. S1
 2. Link Underline (transition)
+   3. S2
 3. Keyframes: Fade-in +Stagger
+   4. S3
 4. steps() Typing Effect
+   5. S4
 5. Skeleto Loader (shimmer)
+   6. S5
 6. Modal (CSS-only with :checked)
+   7. S6
+
+# Links
+https://cssgradient.io/ <br>
+https://html-css-js.com/css/generator/box-shadow/
