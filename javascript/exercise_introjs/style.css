@@ -1,0 +1,8 @@
+body { font-family: system-ui, sans-serif; margin: 2rem; }
+main { max-width: 560px; }
+label { display: block; margin: .5rem 0; }
+input { width: 100%; padding: .5rem; }
+.actions { display: flex; gap: .5rem; margin-top: .75rem; }
+button { padding: .5rem .75rem; cursor: pointer; }
+#message { margin-top: 1rem; font-weight: 600; }
+#cartView { margin-top: .75rem; border: 1px solid #ddd; border-radius: .5rem; padding: .75rem; }
