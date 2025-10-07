@@ -4,6 +4,7 @@
 // Warm-up: prove the script runs, touch DOM, recall typeof.
 console.log("Mini-Shop loaded");
 document.getElementById("message").innerText = "Welcome!";
+console.log(readItemFromInputs());
 
 const cart = [];// { name: string, price: number, qty: number }
 
@@ -24,6 +25,17 @@ function readItemFromInputs() {
   // 1) Read values from #productName, #price, #qty
   // 2) Convert price/qty to numbers using Number(...)
   // 3) Return a plain object: { name, price, qty }
+    // first doing it with the placeholder text; use innerHtml or innerText to get the actual value?
+    let name = document.getElementById("productName").placeholder;
+    let price = document.getElementById("price").placeholder;
+    let quantity = document.getElementById("qty").placeholder;
+    price = Number(price);
+    quantity = Number(quantity);
+    return {
+        "productName": name,
+        "price": price,
+        "quantity": quantity
+    }
 }
 
 // Validate item or throw Error
@@ -37,6 +49,11 @@ function validateItem(item) {
 // Compute a single line total
 function lineTotal(item) {
   // Return item.price * item.qty
+    if((item.price && item.qty) instanceof Number ) {
+        return item.price * item.qty;
+    } else{
+        return -1;
+    }
 }
 
 // Compute subtotal for up to 3 items, WITHOUT LOOPS
@@ -58,6 +75,30 @@ function applyCoupon(codeRaw, subtotal) {
   //    - case "NONE" or default: no changes
   // 4) Compute grandTotal = subtotal + shipping - discount
   // 5) Return { discount, shipping, grandTotal }
+    const code = codeRaw.trim().toUpperCase();
+    let shipping = 39;
+    let discount = 0;
+    if( subtotal instanceof Number){
+        switch(code){
+            case "STUDENT":
+                discount = subtotal * 0.7;
+                break;
+            case "FREESHIP":
+                shipping = 0;
+                break;
+            default:
+                break;
+        }
+        const grandTotal = subtotal + shipping  - discount;
+        return {
+            "discount": discount,
+            "shipping": shipping,
+            "grandTotal": grandTotal
+        }
+    } else{
+        return undefined;
+    }
+
 }
 
 // Render receipt into #cartView WITHOUT LOOPS
