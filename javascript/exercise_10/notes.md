@@ -1,0 +1,5 @@
+- a lot of the times methods are setters & getters for html elements:
+  - get w/ `textBox.innerText` or `textBox.textContent`
+  - or set w/ them
+- look into why an array with objects uses a for-of loop and not a for-in loop
+  - in general look at those loops again

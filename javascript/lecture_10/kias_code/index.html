@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>DOM, Events, Fragments & Forms</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Users Demo</h1>
+
+  <section class="card" aria-labelledby="users-heading">
+    <div class="row space-between">
+      <h2 id="users-heading" class="m0">User List</h2>
+      <button id="shuffleUsers" class="btn" type="button">Shuffle</button>
+    </div>
+    <p class="muted">Rendered via loop → <code>DocumentFragment</code>. Click a user to toggle “selected”.</p>
+    <ul id="userList" aria-live="polite"></ul>
+  </section>
+
+  <section class="card" aria-labelledby="form-heading">
+    <h2 id="form-heading" class="m0">Add / Edit User</h2>
+    <form id="userForm" novalidate>
+      <div class="row">
+        <label for="name">Name</label>
+        <input id="name" name="name" placeholder="Ada Lovelace" autocomplete="name"
+               required minlength="2" />
+      </div>
+      <div class="row">
+        <label for="email">Email</label>
+        <input id="email" name="email" placeholder="ada@example.com" type="email"
+               required />
+      </div>
+      <div class="row">
+        <label for="age">Age</label>
+        <input id="age" name="age" type="text" min="1" max="130" required />
+      </div>
+
+      <fieldset class="card inner" >
+        <legend>Hobbies (dynamic)</legend>
+        <div id="hobbies" class="column" aria-live="polite"></div>
+        <div class="row">
+          <button id="addHobby" class="btn" type="button">+ Add hobby</button>
+          <button id="clearHobbies" class="btn btn--danger" type="button">Clear hobbies</button>
+        </div>
+      </fieldset>
+
+      <div class="row">
+        <button class="btn" type="submit">Save User</button>
+        <button id="resetForm" class="btn" type="reset">Reset</button>
+      </div>
+
+      <p id="formError" class="error" role="alert" aria-live="assertive"></p>
+    </form>
+
+    <p class="muted">Tip: try invalid email/age to see validation. Hobbies can be added/removed.</p>
+  </section>
+
+  <!-- Template for a hobby input row -->
+  <template id="hobbyTemplate">
+    <div class="row hobby-row">
+      <input type="text" name="hobby" placeholder="e.g. Chess" minlength="2" required />
+      <button class="btn btn--danger remove-hobby" type="button" aria-label="Remove hobby">Remove</button>
+    </div>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+body {
+    font-family: system-ui, sans-serif;
+    margin: 2rem;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+input,
+select,
+button {
+    padding: .5rem;
+    margin-top: .5rem;
+}
+
+.error {
+    color: #c00;
+    font-size: .9rem;
+}
+
+li {
+    margin: .5rem 0;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: gray;
+}

@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+  <h1>Mini Task Manager</h1>
+
+  <section class="card">
+    <h2>Add New Task</h2>
+    <form id="taskForm">
+      <label>
+        Task Title:
+        <input id="taskTitle" name="title" required minlength="3" placeholder="e.g. Buy groceries">
+      </label>
+      <label>
+        Priority:
+        <select id="taskPriority" name="priority" required>
+          <option value="">Select priority</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+      </label>
+      <button type="submit">Add Task</button>
+      <p id="formError" class="error"></p>
+    </form>
+  </section>
+
+  <section class="card">
+    <h2>All Tasks</h2>
+    <ul id="taskList"></ul>
+    <button id="clearTasks">Clear All</button>
+      <button id="sortByPriority">Sort By Priority</button>
+  </section>
+
+  <!-- <script src="app.js"></script> -->
+</body>
+</html>
