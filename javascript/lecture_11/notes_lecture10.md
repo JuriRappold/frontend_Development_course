@@ -1,0 +1,3 @@
+- [Docs for dummyjson users](https://dummyjson.com/docs/users) and other docs
+- `(el, ...things)`: `...things` concatenates all parameters entered after `el` into an array called things
+- we are now ready to do assignment 02
