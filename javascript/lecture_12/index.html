@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Lecture 12 – Prototypal Inheritance & ES6 Classes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<h1>Lecture 12 – Prototypes & ES6 Classes</h1>
+<p class="muted">
+    Click a demo and follow along. Output appears below and in the console.
+</p>
+
+<div class="bar">
+    <button onclick="DEMO.objectCreate()">01 Object.create()</button>
+    <button onclick="DEMO.constructorFunctions()">02 Constructor Functions</button>
+    <button onclick="DEMO.es6Classes()">03 ES6 Classes</button>
+    <button onclick="DEMO.shapes()">04 Shapes Exercise</button>
+    <button onclick="clearLog()">Clear Output</button>
+</div>
+
+<pre id="log" aria-live="polite"></pre>
+
+<div class="sep"></div>
+<p class="muted">
+    💡 While livecoding, pause after each <code>log()</code> to ask:
+    “Where will JavaScript look next?”
+</p>
+
+<script src="./js/logger.js"></script>
+<script src="./js/01_object_create.js"></script>
+<script src="./js/02_constructor_functions.js"></script>
+<script src="./js/03_es6_classes.js"></script>
+<script src="./js/04_shapes.js"></script>
+<script>
+    const DEMO = {
+        objectCreate: demoObjectCreate,
+        constructorFunctions: demoConstructorFunctions,
+        es6Classes: demoES6Classes,
+        shapes: demoShapes
+    };
+</script>
+</body>
+</html>
