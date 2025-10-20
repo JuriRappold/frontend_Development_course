@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+  <meta charset="utf-8" />
+  <title>Products Explorer — Starter</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 2rem; }
+    ul { display:grid; gap:.5rem; padding:0; list-style:none; }
+    li { display:flex; justify-content:space-between; align-items:center;
+         border:1px solid #ddd; padding:.5rem .75rem; border-radius:.5rem; }
+    button { cursor:pointer; }
+    dialog { border:none; border-radius:.75rem; padding:1rem 1.25rem;
+             box-shadow:0 10px 30px rgba(0,0,0,.2); display: none;
+             position: fixed; top: 30%; left: 5%;
+    }
+    .show {
+        display: flex;
+        flex-direction: column;
+    }
+  </style>
+  <ul id="list"></ul>
+  <p id="footer"></p>
+  <dialog id="modal"></dialog>
+  <div id="testing"></div>
+  <script type="module" src="./main.js"></script>
+</html>

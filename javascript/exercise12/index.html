@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Mini Product Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>🛍️ Mini Product Finder</h1>
+
+    <form id="searchForm" novalidate>
+      <!-- TODO: text input with id="query" (placeholder: e.g., phone, laptop) -->
+        <label for="query">Looking for: <input type="text" id="query" placeholder="e.g. phone"></label>
+      <!-- TODO: checkbox "Only in stock" with id="onlyInStock" -->
+        <label for="onlyInStock">Only in stock <input type="checkbox" id="onlyInStock"></label>
+      <!-- TODO: submit button -->
+        <input type="submit" id="submitBtn">
+      <p id="error" class="error" aria-live="polite"></p>
+    </form>
+
+    <!-- TODO: status element with id="status" for "Loading…"/empty/result count -->
+    <p id="status"></p>
+    <section id="results" class="results" aria-live="polite">
+
+    </section>
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>
